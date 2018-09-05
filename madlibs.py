@@ -15,7 +15,7 @@ def spongebob():
     print("Spongebob is %s and %s" % (colored(adj1, "yellow"), colored(adj2, "yellow")))
 
 #construct story
-story = input("Which story would you like? Options: squidward, spongebob ")
+story = input("Which story would you like? Options: \033[92msquidward, spongebob \033[37m") 
 if story == "squidward":
     squidward()
 elif story == "spongebob":
