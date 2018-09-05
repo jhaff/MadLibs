@@ -1,4 +1,5 @@
 from termcolor import colored
+import random
 ##This program acts as a madLib program asking the user for input and constructing
 ##a story out of said inputs
 
@@ -32,20 +33,21 @@ def spongebob():
 
 def patrick():
     #gather data for story
-    adj1 = input("Enter an adjective: ")
-    noun = input("Enter a noun: ")
-    num = int(input("Enter a number "))
+    noun1 = input("Enter a noun: ")
+    noun2 = input("Enter another noun: ")
+    noun3 = input("Enter yet another noun ")
     #form the list
-    li= [adj1,noun,num]
+    li= [noun1,noun2,noun3]
+    random.shuffle(li);
     #print story
-    print("Patrick had a %s %s which he sold for %s doubloons" % (colored(li[0], "yellow"), colored(li[1], "yellow"), colored(int(li[2]), "yellow")))
+    print("Patrick had a huge %s, a tiny %s, and a wonderful %s." % (colored(li[0], "yellow"), colored(li[1], "yellow"), colored(li[2], "yellow")))
 
 def krabs():
     #gather data for story
 
     adj1 = input("Enter an adjective: "),
     noun1 = input("Enter a noun: "),
-    verb1= input("Enter a verb: "),
+    verb1= input("Enter a past tense verb: "),
 
     words = {
 		"adjective" : adj1,
@@ -58,13 +60,19 @@ def krabs():
 
 #ask user which story to present
 story = input("Which story would you like? Options: \033[92msquidward, spongebob, patrick, krabs \033[37m")
-if story == "squidward":
-    squidward()
-elif story == "spongebob":
-    spongebob()
-elif story == "patrick":
-    patrick()
-elif story == "krabs":
-    krabs()
-else:
-    print("Doesn't Exist.")
+
+while True:
+    if story == "squidward":
+        squidward()
+        break
+    elif story == "spongebob":
+        spongebob()
+        break
+    elif story == "patrick":
+        patrick()
+        break
+    elif story == "krabs":
+        krabs()
+        break
+    else:
+        print("Doesn't Exist.")
