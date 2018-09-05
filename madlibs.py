@@ -8,9 +8,16 @@ def squidward():
     anothernoun = input("Enter another noun: ")
     print("Squidward %sed %s but the %s was utterly surprised by it." % (verb, noun, anothernoun))
 
+def spongebob():
+    adjective = input("Enter an adjective: ")
+    adj = input("Enter another adjective: ")
+    print("Spongebob is %s and %s" % (adjective, adj))
+
 #construct story
-story = input("Which story would you like? Options: squidward  ")
+story = input("Which story would you like? Options: squidward, spongebob ")
 if story == "squidward":
     squidward()
+elif story == "spongebob":
+    spongebob()
 else:
     print("Doesn't Exist.")
