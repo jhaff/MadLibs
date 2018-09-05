@@ -12,10 +12,11 @@ def squidward():
 def spongebob():
     adj1 = input("Enter an adjective: ")
     adj2 = input("Enter another adjective: ")
-    print("Spongebob is %s and %s" % (colored(adj1, "yellow"), colored(adj2, "yellow")))
+    tup1= (adj1,adj2)
+    print("Spongebob is %s and %s" % (colored(tup1[0], "yellow"), colored(tup1[1], "yellow")))
 
 #construct story
-story = input("Which story would you like? Options: \033[92msquidward, spongebob \033[37m") 
+story = input("Which story would you like? Options: \033[92msquidward, spongebob \033[37m")
 if story == "squidward":
     squidward()
 elif story == "spongebob":
