@@ -1,3 +1,4 @@
+from termcolor import colored
 ##This program acts as a madLib program asking the user for input and constructing
 ##a story out of said inputs
 
@@ -6,7 +7,7 @@ def squidward():
     verb = input("Enter a verb: ")
     noun = input("Enter a noun: ")
     anothernoun = input("Enter another noun: ")
-    print("Squidward %sed %s but the %s was utterly surprised by it." % (verb, noun, anothernoun))
+    print("Squidward %s %s but the %s was utterly surprised by it." % (colored(verb + "ed","yellow"), (colored(noun, "yellow")), colored(anothernoun, "yellow")))
 
 def spongebob():
     adjective = input("Enter an adjective: ")
