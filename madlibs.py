@@ -18,7 +18,7 @@ def squidward():
     verb = input("Enter a verb: ")
     noun = input("Enter a noun: ")
     anothernoun = input("Enter another noun: ")
-    #print story
+    #print story, notice the concatenation
     print("Squidward %s %s but the %s was utterly surprised by it." % (colored(verb + "ed","yellow"), (colored(noun, "yellow")), colored(anothernoun, "yellow")))
 
 def spongebob():
@@ -40,13 +40,31 @@ def patrick():
     #print story
     print("Patrick had a %s %s which he sold for %s doubloons" % (colored(li[0], "yellow"), colored(li[1], "yellow"), colored(int(li[2]), "yellow")))
 
+def krabs():
+    #gather data for story
+
+    adj1 = input("Enter an adjective: "),
+    noun1 = input("Enter a noun: "),
+    verb1= input("Enter a verb: "),
+
+    words = {
+		"adjective" : adj1,
+		"noun" : noun1,
+		"verb" : verb1,
+	}
+    #print story
+    print("Mr Krabs had a %s %s and then he %s." % (colored(words["adjective"], "yellow"), colored(words["noun"], "yellow"), colored(words["verb"], "yellow")))
+
+
 #ask user which story to present
-story = input("Which story would you like? Options: \033[92msquidward, spongebob, patrick \033[37m")
+story = input("Which story would you like? Options: \033[92msquidward, spongebob, patrick, krabs \033[37m")
 if story == "squidward":
     squidward()
 elif story == "spongebob":
     spongebob()
 elif story == "patrick":
     patrick()
+elif story == "krabs":
+    krabs()
 else:
     print("Doesn't Exist.")
