@@ -10,9 +10,9 @@ def squidward():
     print("Squidward %s %s but the %s was utterly surprised by it." % (colored(verb + "ed","yellow"), (colored(noun, "yellow")), colored(anothernoun, "yellow")))
 
 def spongebob():
-    adjective = input("Enter an adjective: ")
-    adj = input("Enter another adjective: ")
-    print("Spongebob is %s and %s" % (adjective, adj))
+    adj1 = input("Enter an adjective: ")
+    adj2 = input("Enter another adjective: ")
+    print("Spongebob is %s and %s" % (colored(adj1, "yellow"), colored(adj2, "yellow")))
 
 #construct story
 story = input("Which story would you like? Options: squidward, spongebob ")
